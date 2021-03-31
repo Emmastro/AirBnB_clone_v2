@@ -140,7 +140,7 @@ class HBNBCommand(cmd.Cmd):
         for attribute in attributes:
             key, value = attribute.split('=')
             # Handle the formating (string, integer, float, underscore)
-            value.replace('_', ' ')
+            value = value.replace('_', ' ')
 
             if value[0] == value[-1] == '"':
                 value = value[1:-1]
