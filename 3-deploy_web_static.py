@@ -32,7 +32,7 @@ def do_pack():
 
 
 def do_deploy(archive_path):
-    """Distributes an archive to a web server.
+    """Distributes an archive to a web server
        Returns True if successful and false if not
     """
     if os.path.isfile(archive_path) is False:
