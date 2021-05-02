@@ -8,13 +8,13 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
-@app.route('/states')
+@app.route('/states', strict_slashes=False)
 def states():
     states = storage.all("State")
     return render_template('9-states.html', states=states)
 
 
-@app.route('/states/<id>')
+@app.route('/states/<id>', strict_slashes=False)
 def states_given_id(id):
     states = storage.all("State")
     found_state = ""
